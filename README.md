@@ -5,7 +5,7 @@
 - [Key Features](#key-features)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Deploy model locally](#deploy-model-locally)
 - [Technical Details](#technical-details)
 - [Performance](#performance)
 - [Future Enhancements](#future-enhancements)
@@ -31,8 +31,15 @@ Accurate price predictions provide a competitive advantage in the real estate ma
 - Evaluation and Deployment: Offers performance metrics and a scalable deployment pipeline for model predictions.
 ## Installation
 - Clone the repository: git clone https://github.com/karthikeya1561/house-price-prediction-mlop
-- Install dependecies: pip install -r requirements.txt
+- Install dependecies:
+   - pip install zenml["server"]
+   - pip install flask
+   - (Check if you have all other dependencies like pandas, scikit-Learn, numpy)
+   - zenml init
 - Set Up Environment Variables: Define variables such as data paths or API keys if required. Place these in a .env file in the root directory.
+## Deploy model locally
+- Use python run_pipeline.py to run the zenml pipeline
+- use python api.py to run the flask server with pipeline at the endpoint "/modeltest"
 ## Technical Details
 - Model: Decision Tree Regressor
 - Libraries: Scikit-learn, Pandas, Joblib, Numpy
